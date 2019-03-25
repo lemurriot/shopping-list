@@ -1,3 +1,5 @@
 # Shopping List App Challenge
 
-This repo contains starter files for the *Shopping List App* challenge.
+Practice app for working with jQuery.
+
+Deployed at https://lemurriot.github.io/shopping-list/

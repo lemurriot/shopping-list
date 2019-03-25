@@ -19,6 +19,8 @@ $(function() {
             </div>
         </li>
         `)
+
+        $('#shopping-list-entry').val("");
     });
 
     //handling check button event to toggle class

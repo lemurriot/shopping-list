@@ -6,7 +6,7 @@ $(function() {
         
         //append new item from form entry
         const item = $('#shopping-list-entry').val();
-        $('.shopping-list').append(`
+        $('ul').append(`
             <li>
             <span class="shopping-item">${item}</span>
             <div class="shopping-item-controls">
@@ -22,13 +22,13 @@ $(function() {
     });
 
     //handling check button event to toggle class
-    $('li').on('click', '.shopping-item-toggle', function(event){
-        let targetEl = $(this).closest('li').children('.shopping-item')
+    $('ul').on('click', '.shopping-item-toggle', function(event){
+        const targetEl = $(this).parents('li').children('.shopping-item')
         $(targetEl).toggleClass('shopping-item__checked')
     });
 
     //handling delete item
-    $('li').on('click', '.shopping-item-delete', function(event){
-        let targetEl = $(this).closest('li').remove();
+    $('ul').on('click', '.shopping-item-delete', function(event){
+        const targetEl = $(this).parents('li').remove();
     });
 });

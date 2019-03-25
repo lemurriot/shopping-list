@@ -1,4 +1,6 @@
 $(function() {
+
+    //handling form submission
     $('#js-shopping-list-form').submit(event => {
         event.preventDefault();
         
@@ -17,5 +19,16 @@ $(function() {
             </div>
         </li>
         `)
+    });
+
+    //handling check button event to toggle class
+    $('li').on('click', '.shopping-item-toggle', function(event){
+        let targetEl = $(this).closest('li').children('.shopping-item')
+        $(targetEl).toggleClass('shopping-item__checked')
+    });
+
+    //handling delete item
+    $('li').on('click', '.shopping-item-delete', function(event){
+        let targetEl = $(this).closest('li').remove();
     });
 });
